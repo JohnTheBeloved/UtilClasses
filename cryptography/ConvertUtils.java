@@ -11,6 +11,11 @@ public class ConvertUtils{
 		return bytes;
 	}
 
+	 public static String asciiToBinToHex(String arg) throws UnsupportedEncodingException{
+
+    		return bytesToHex(arg.getBytes("UTF-8"));
+    }
+
 	public static String bytesToHex(byte[] bytes){
 		char[] charsK = "0123456789ABCDEF".toCharArray();
 		char[] chars = new char[bytes.length*2];
